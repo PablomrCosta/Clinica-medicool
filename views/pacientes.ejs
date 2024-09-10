@@ -1,0 +1,33 @@
+<%- include('layout') -%>
+
+<div class="container">
+  <br><br><br>
+  <% if (isEmpty) { %>
+    <div class="alert alert-warning" role="alert" style="background-color: #8AC3CA; color: #066C78; border-color: #056D78; font-size: x-large; text-align: center;">
+      Não há pacientes cadastrados no momento.
+    </div>
+  <% } else { %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>CPF</th>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Dia Marcado</th>
+          <th>Hora Marcada</th>
+        </tr>
+      </thead>
+      <tbody > 
+        <% pacientes.forEach(function(paciente) { %>
+          <tr> 
+            <td><%= paciente.CPF %></td>
+            <td><%= paciente.Nome %></td>
+            <td><%= paciente.Idade %></td>
+            <td><%= paciente.DiaMarcado %></td>
+            <td><%= paciente.HoraMarcada %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } %>
+</div>

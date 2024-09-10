@@ -1,0 +1,82 @@
+<%- include('layout') -%>
+<br/>
+<div class="container">
+  <h2><%= title %></h2>
+  <br/>
+  <form action="/pacientes/add" method="POST">
+    <div class="d-flex justify-content-center">
+      <label>Adicione todos os dados do Paciente</label>
+      <br/> 
+    </div>
+    <div class="row mb-2">
+      <label class="col-sm-2 col-form-label">Nome:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          name="Nome"
+          value="<%= typeof Nome !== 'undefined' ? Nome : '' %>"
+          required
+        />
+      </div>
+    </div>
+    
+    <div class="row mb-2">
+      <label class="col-sm-2 col-form-label">Idade:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          name="Idade"
+          value="<%= typeof Idade !== 'undefined' ? Idade : '' %>"
+          required
+        />
+      </div>
+    </div>  
+    <div class="row mb-2">
+      <label class="col-sm-2 col-form-label">CPF:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          name="CPF"
+          value="<%= typeof CPF !== 'undefined' ? CPF : '' %>"
+          required
+        />
+
+        <% if (typeof errorMessage !== 'undefined') { %>
+          <div class="text-danger"><%= errorMessage %></div>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <label class="col-sm-2 col-form-label">Dia Marcado:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control form-control-lg"
+          type="date"
+          name="DiaMarcado"
+          value="<%= typeof DiaMarcado !== 'undefined' ? DiaMarcado : '' %>"
+          required
+        />
+      </div>
+    </div>
+    
+    <div class="row mb-2">
+      <label class="col-sm-2 col-form-label">Hora Marcada:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control form-control-lg"
+          type="time"
+          name="HoraMarcada"
+          value="<%= typeof HoraMarcada !== 'undefined' ? HoraMarcada : '' %>"
+          required
+        /><br />
+      </div>
+    </div>
+    <div class="text-center">
+      <input class="btn btn-primary" type="submit" value="Submit" style="background-color: #066C78; border-color: #066C78;">
+    </div>
+  </form>
+</div>
