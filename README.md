@@ -1,4 +1,4 @@
-# Clinica-NODE
+# Clinica-Medicoool-A melhor do Centro-Oeste
 
 Este projeto é uma aplicação de gerenciamento de pacientes desenvolvida utilizando Node.js e EJS, com estilizações em Bootstrap. Baseia-se no exemplo fornecido pelo repositório [claulis/CRUD at avançado](https://github.com/claulis/CRUD/tree/avançado), criado por Claudio Ulisse como parte da disciplina de Programação para Internet no Instituto Federal de Brasília.
 
